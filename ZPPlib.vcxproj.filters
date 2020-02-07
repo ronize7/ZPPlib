@@ -3,6 +3,18 @@
   <ItemGroup>
     <ClCompile Include="APC.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ProcessList.cpp">
+      <Filter>ProcessList</Filter>
+    </ClCompile>
+    <ClCompile Include="Process.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoCloseHandle.cpp">
+      <Filter>AutoClose</Filter>
+    </ClCompile>
+    <ClCompile Include="DllInjector.cpp">
+      <Filter>DllInjector</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="APC.hpp" />
@@ -11,10 +23,34 @@
     <ClInclude Include="DllInjector.hpp">
       <Filter>DllInjector</Filter>
     </ClInclude>
+    <ClInclude Include="ProcessList.hpp">
+      <Filter>ProcessList</Filter>
+    </ClInclude>
+    <ClInclude Include="Process.hpp">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoCloseHandle.hpp">
+      <Filter>AutoClose</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="DllInjector">
       <UniqueIdentifier>{b1430b04-f5b2-410e-9ec4-678967df8e23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProcessList">
+      <UniqueIdentifier>{777bea01-c48e-4029-a3dd-ef4ca6850a0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Process">
+      <UniqueIdentifier>{632a3a44-d442-433a-b702-88226865bfb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{0a5d667b-1a98-4a9f-8cd7-bce4942dc650}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutoClose">
+      <UniqueIdentifier>{cac7bb3f-6725-4059-b6f9-26c7c86c0272}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

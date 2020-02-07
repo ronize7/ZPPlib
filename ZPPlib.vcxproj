@@ -149,13 +149,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="APC.cpp" />
+    <ClCompile Include="AutoCloseHandle.cpp" />
+    <ClCompile Include="DllInjector.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Process.cpp" />
+    <ClCompile Include="ProcessList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="APC.hpp" />
+    <ClInclude Include="AutoCloseHandle.hpp" />
+    <ClInclude Include="Common.hpp" />
     <ClInclude Include="DllInjector.hpp" />
     <ClInclude Include="Factory.hpp" />
     <ClInclude Include="Logger.hpp" />
+    <ClInclude Include="Process.hpp" />
+    <ClInclude Include="ProcessList.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,6 +6,8 @@
 #include "Logger.hpp"
 #include "Factory.hpp"
 #include "APC.hpp"
+#include "ProcessList.hpp"
+#include "DllInjector.hpp"
 
 int main()
 {
@@ -15,8 +17,19 @@ int main()
     std::wstring x(L"abcd");
     logger->log(L"abcd % % % %", 1, 2, 3, std::move(x));
 
-    APC::s_run();
+    //APC::s_run();
+    auto p_list = ProcessList::s_get_processs_list();
+    auto notepad = std::find_if(p_list.begin(), p_list.end(), [&](Process& process) -> bool {
+        return (process.get_process_name() == std::wstring(L"notepad.exe"));
+        });
 
+    for (auto p : p_list)
+    {
+        logger->log(L"%\n", p.get_process_name());
+    }
+
+    DllInjector injector(*notepad, L"C:\\Projects\\PlaygroundDll\\x64\\Release\\PlaygroundDll.dll");
+    injector.inject();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
